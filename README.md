@@ -10,3 +10,4 @@ Syke Feed
 
 Yleistä
 - miten katotaan onko tiedostot jo ladattu kun ne on pakattu zippeihin?
+- kun vertaillaan kumpi aineisto on uudempi miten otetaan huomioon mahdolliset aikaerot.

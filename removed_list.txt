@@ -1,0 +1,4 @@
+;syke/gis_data/spesific/luonnonsuojelualueet_eramaa.zip
+;syke/gis_data/spesific/luonnonsuojelualueet_yksityinen.zip
+;syke/gis_data/spesific/ROSKA
+;syke/gis_data/spesific/luonnonsuojelualueet_valtio.zip
