@@ -100,7 +100,6 @@ def get_dataset(link, params, base_url, base_folder):
 	conflict_set = {}
 	removed_set = {}
 	matching_set = {}
-
 	
 	for child in entry_feed.findall(ns+'entry'):
 		dl_link = child.find(ns+'link').get('href')		

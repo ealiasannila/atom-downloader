@@ -1,0 +1,7 @@
+taito
+python2 test.py https://tiedostopalvelu.maanmittauslaitos.fi/tp/feed/mtp/laser/etrs-tm35fin-n2000 /proj/ogiir-csc/mml/laser/Interaktiivinenluokittelu_2008-2016/   -p api_key=bg5gt3qcn0gkv04rbukeam1btb -r report.txt -b https://tiedostopalvelu.maanmittauslaitos.fi/tp/tilauslataus/tuotteet/laser/etrs-tm35fin-n2000/mara_2m/
+
+
+oma
+python2.7 atom_reader_next.py https://tiedostopalvelu.maanmittauslaitos.fi/tp/feed/mtp/laser/etrs-tm35fin-n2000 mml -p api_key=bg5gt3qcn0gkv04rbukeam1btb -r report.txt -b https://tiedostopalvelu.maanmittauslaitos.fi/tp/tilauslataus/tuotteet/laser/etrs-tm35fin-n2000/mara_2m/
+
