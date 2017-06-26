@@ -81,12 +81,19 @@ def get_dataset(link, params, base_url, base_folder):
 		base_url = 'http://'
 	ns = '{http://www.w3.org/2005/Atom}' #namespace	
 	s = add_params(link, params)	
-	entry_feed = ET.ElementTree(file=urllib.urlopen(s)).getroot()	
+	
+	et = None
+	try:
+		et = ET.parse(urllib.urlopen(s))
+	except ET.ParseError as detail:
+		print detail
+    		return None
 
+	entry_feed = et.getroot()
 	print "Feed URL:"
 	print s
 	print entry_feed.find(ns+'title').text
-	
+
 	dl_set = {}
 	update_set = {}
 	aof_set = {}
@@ -94,7 +101,7 @@ def get_dataset(link, params, base_url, base_folder):
 	removed_set = {}
 	matching_set = {}
 
-		
+	
 	for child in entry_feed.findall(ns+'entry'):
 		dl_link = child.find(ns+'link').get('href')		
 		path,slash, f = dl_link.split('?')[0][len(base_url):].rpartition(r'/')
@@ -119,10 +126,11 @@ def get_dataset(link, params, base_url, base_folder):
 				aof_set[filename] = meta
 			else:
 				conflict_set[filename] = meta
-	
+
 	check_local_files(base_folder, [update_set, aof_set, conflict_set, dl_set, matching_set], removed_set)	
 
 	return dl_set, update_set, aof_set, conflict_set, removed_set, matching_set
+
 
 
 def parse_args():
@@ -154,7 +162,9 @@ def main():
 	args = parse_args()
 	sets = get_dataset(args.feed_url,args.p, args.b, args.base_directory)
 
-	
+	if not sets:
+		print 'Things went wrong reading atom feed xml'
+		return
 	print_report(['new files to be downloaded', 'files to be updated', 'files with newer local versions', 'files with matching timestamps, but conflicting sizes', 'files not found in feed', 'files matching those in feed'], sets)	
 
 	if args.d:	
@@ -183,9 +193,6 @@ def main():
 if __name__ == "__main__":
     main()	
 
-
-
-#get_dataset('https://tiedostopalvelu.maanmittauslaitos.fi/tp/feed/mtp/laser/etrs-tm35fin-n2000',['api_key=bg5gt3qcn0gkv04rbukeam1btb', 'updated=2017-03-27T00:00'],'https://tiedostopalvelu.maanmittauslaitos.fi/tp/tilauslataus/tuotteet/', 'mml', 3)
 
 
 
