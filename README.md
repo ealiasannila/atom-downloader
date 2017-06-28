@@ -7,8 +7,7 @@ MML Feed
 Syke Feed
 - Aineistot samassa gis_data/specific kansiossa
 
-
-#Muutostietopalvelun ja kovalevyaineiston eroja:
+# Muutostietopalvelun ja kovalevyaineiston eroja:
 * Yhteensä 30372 .laz tiedostoa, jotka löytyivät molemmista kanavista.
 * Näistä 22226 .laz tiedostoa, jotka ovat saman nimisiä ja kokoisia (oletettavasti identtisiä) kovalevyllä ja muutostietopalvelussa
 * Kovalevyllä on 363 perusnimistä (esim. N4131F1.laz)  .laz tiedostoa, joita ei löydy muutostietopalvelusta, lisäksi added_pts.laz tiedostoja.
