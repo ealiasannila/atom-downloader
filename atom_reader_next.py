@@ -47,7 +47,7 @@ def write_report(feed_files, local_files, report_file):
 				if delta >timedelta(hours=24):
 					report.write( 'update; ' + f+';' +  str(feed_files[f][0]) + ';'+str(feed_files[f][1])+';'+str(local_files[f][0])+';'+str(local_files[f][1]) +'\n')
 				elif delta <timedelta(hours=-24):
-					report.write( 'aof; ' + f +';'  str(feed_files[f][0]) + ';'+str(feed_files[f][1])+';'+str(local_files[f][0])+';'+str(local_files[f][1])+'\n')
+					report.write( 'aof; ' + f +';'+  str(feed_files[f][0]) + ';'+str(feed_files[f][1])+';'+str(local_files[f][0])+';'+str(local_files[f][1])+'\n')
 				else:
 					report.write('ok; ' +f+';' +  str(feed_files[f][0]) + ';'+str(feed_files[f][1])+';'+str(local_files[f][0])+';'+str(local_files[f][1])+'\n')
 				

@@ -1,0 +1,52 @@
+reporting all LAS header entries:
+  file signature:             'LASF'
+  file source ID:             0
+  global_encoding:            0
+  project ID GUID data 1-4:   00000000-0000-0000-0000-000000000000
+  version major.minor:        1.0
+  system identifier:          ''
+  generating software:        'EspaEngine'
+  file creation day/year:     0/0
+  header size:                227
+  offset to point data:       229
+  number var. length records: 0
+  point data format:          1
+  point data record length:   28
+  number of point records:    13200888
+  number of points by return: 0 0 0 0 0
+  scale factor x y z:         0.001 0.001 0.001
+  offset x y z:               -0 6000000 -0
+  min x y z:                  302000.000 6744000.000 79.123
+  max x y z:                  304999.998 6746999.999 1620.566
+the header is followed by 2 user-defined bytes
+LASzip compression (version 2.1r0 c2 50000): POINT10 2 GPSTIME11 2
+reporting minimum and maximum for all LAS point record entries ...
+  X           302000000  304999998
+  Y           744000000  746999998
+  Z               79123    1620566
+  intensity           0        255
+  return_number       1          4
+  number_of_returns   1          4
+  edge_of_flight_line 0          1
+  scan_direction_flag 0          1
+  classification      1         14
+  scan_angle_rank   -21         27
+  user_data           0          0
+  point_source_ID     4         27
+  gps_time 74435.963004 217912.400724
+number of first returns:        11467547
+number of intermediate returns: 190100
+number of last returns:         11463742
+number of single returns:       9920501
+WARNING: for return 1 real number of points by return is 11467547 but header entry was not set.
+WARNING: for return 2 real number of points by return is 1546311 but header entry was not set.
+WARNING: for return 3 real number of points by return is 180498 but header entry was not set.
+WARNING: for return 4 real number of points by return is 6532 but header entry was not set.
+overview over number of returns of given pulse: 9920501 2726879 526380 27128 0 0 0
+histogram of classification of points:
+         5907652  unclassified (1)
+         5531225  ground (2)
+         1737146  low vegetation (3)
+              10  noise (7)
+             703  water (9)
+           24152  wire conductor (14)
