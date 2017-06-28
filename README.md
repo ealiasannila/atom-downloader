@@ -1,12 +1,3 @@
-# atom-downloader
-App to download and maintain gis files from mml, syke etc. INSPIRE atom feeds
-
-MML Feed
-- ei toimi kunnolla, 500 erroria tulee 
-
-Syke Feed
-- Aineistot samassa gis_data/specific kansiossa
-
 # Muutostietopalvelun ja kovalevyaineiston eroja:
 * Yhteensä 30372 .laz tiedostoa, jotka löytyivät molemmista kanavista.
 * Näistä 22226 .laz tiedostoa, jotka ovat saman nimisiä ja kokoisia (oletettavasti identtisiä) kovalevyllä ja muutostietopalvelussa
